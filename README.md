@@ -138,6 +138,29 @@ Here’s what’s planned next to continue improving my C skills:
 | 19   | GCD & LCM Calculator | Use loops or recursion for computation.
 | 20   | Simple Banking System (CLI) | Deposit, withdraw, check balance (using functions and structures). |
 
+---
+
+### Concepts You’ll Master Along the Way
+| Concept | Covered In |
+|---------|------------|
+| Input/Output | Projects 1–5 |
+| Conditionals | Projects 3–5, 10 |
+| Loops | Projects 6–10 |
+| Arrays | Projects 11–12 |
+| Strings | Projects 13–14 |
+| Functions | Projects 16–19 |
+| Recursion | Project 18 |
+| Structures | Project 20 |
+| File Handling (optional next step) | Future add-ons |
+
+## Next Steps
+
+After these 20 projects, move to intermediate C topics:
+
+* File handling (read/write text files)
+* Pointers and dynamic memory (malloc, free)
+* Structs and enums
+* Mini data management systems (contacts, students, etc.)
 
 
 ##  Author
