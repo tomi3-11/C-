@@ -6,6 +6,11 @@
 #define success 0
 #define failure -1
 
+// Function prototypes
+double total_energy(double power, double hours, double days);
+double power(double work, double time);
+
+
 int main() {
     // Main function 
 }
