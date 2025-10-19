@@ -1,3 +1,9 @@
+/* 
+A simple program that test whether its positive, negative or zero
+    1. Takes user inputs
+    2. evaluate user inputs using loops
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
