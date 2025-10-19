@@ -6,20 +6,22 @@
 int main() {
     // Main function of negative or positive.
     int number;
-
-    printf("Enter a number: ");
-    scanf("%d", &number);
-
+   
     while (True) {
+        // inputs
+        printf("Enter a number: ");
+        scanf("%d", &number);
+
+        // Evaluate the user input.
         if (number > 0) {
             // Positive
-            printf("The number %d is positive.");
+            printf("The number %d is positive.\n", number);
         } else if (number < 0) {
             // Negative
-            printf("The number %d is negative.");
+            printf("The number %d is negative.\n", number);
         } else {
             // Zero
-            printf("The number %d is zero.");
+            printf("The number %d is zero.\n", number);
         }
     }
 }
