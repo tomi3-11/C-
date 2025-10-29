@@ -1,2 +1,10 @@
 # Compiled files
 *.exe
+*.o
+*.out
+cal
+converter
+electricityBill
+evenOrOddChecker
+posNegZero
+LargestOfThreeNumbers

@@ -38,8 +38,6 @@ int main() {
             // call the function.
             result = fahrenheit_to_celsius(temp);
             printf("%.5f °F = %.5f °C\n", temp, result);
-        } else if (choice == 3) {
-            printf("Exiting program...\n");
         } else {      
             printf("Invalid input!");
         }
@@ -52,17 +50,11 @@ int main() {
 
 // celcius to fahrenheit
 int celsius_to_fahrenheit(double temp) {
-    // convert.
-    double result;
-    // formula 
-    result = (temp * (9.0/5.0)) + 32;
-    return result;
+    // formula: (temp * 9/5) + 32
+    return (temp * (9.0/5.0)) + 32;
 }
 
 int fahrenheit_to_celsius(double temp) {
-    // convert
-    double result;
-    // formula
-    result = (temp - 32) * 5.0/9.0;
-    return result;
+    // formula: (temp - 32) * 5/9
+    return (temp - 32) * 5.0/9.0;
 }
