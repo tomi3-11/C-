@@ -5,7 +5,7 @@
 int main() {
     // Main Function.
     int nums[] = {2, 4, 5};
-
+    
     int length = sizeof(nums) / sizeof(nums[0]);
 
     int answer = 0;
@@ -14,6 +14,6 @@ int main() {
         answer += nums[i];
     }
     
-    printf("The sum of natural numbers is %d", answer);
+    printf("The sum of natural numbers is %d\n", answer);
     return 0;
 }
