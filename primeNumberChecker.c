@@ -18,16 +18,24 @@ int main() {
     // }
 
     if (num <= 1) {
+        printf("Number %d is not a prime number.\n", num);
         return 0;
     }
 
+    int isPrime = 1; 
+
     for (int i = 2; i < sqrt(num) + 1; i ++) {
         if (num % i == 0) {
-            return 1;
-            printf("Number %d is a prime number.\n", num);
-        } else {
-            printf("Number %d is not a prime number.\n", num);
+            isPrime = 0; // found a divisor not a prime
+            break;
         }
     }
+
+    if (isPrime) {
+        printf("Number %d is a prime number.\n", num);
+    } else {
+        printf("Number %d is not a prime number.\n", num);
+    }
     
+    return 0;
 }
