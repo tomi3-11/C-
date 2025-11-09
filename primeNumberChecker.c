@@ -10,20 +10,16 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    // if statements
-    // if (num % 1 == 0 && num % num == 0) {
-    //     printf("The number %d is a prime number.\n", num);
-    // } else {
-    //     printf("The number %d is not a prime number.\n", num);
-    // }
-
+    // Neglecting numbers below and including 1
     if (num <= 1) {
         printf("Number %d is not a prime number.\n", num);
         return 0;
     }
 
+    // a boolean to assume True for any number
     int isPrime = 1; 
 
+    // Check divisors up to the square root of the number
     for (int i = 2; i < sqrt(num) + 1; i ++) {
         if (num % i == 0) {
             isPrime = 0; // found a divisor not a prime
