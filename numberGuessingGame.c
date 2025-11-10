@@ -3,9 +3,6 @@
 #include <stdbool.h>
 #include <time.h>
 
-// #define True 1
-// #define False 0
-
 int main() {
     // Initializing project variables
     int num, guess;
@@ -13,6 +10,7 @@ int main() {
     // Highest Number
     int N = 100;
 
+    // Seed the random number generator with current time
     srand((unsigned int)time(NULL));
 
     guess = rand() % (N + 1);
