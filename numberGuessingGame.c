@@ -26,9 +26,9 @@ int main() {
             printf("You guessed the number %d right.", guess);
             break;
         } else if (num < guess) {
-            printf("Too low! try again");
+            printf("Too low! try again\n");
         } else if (num > guess) {
-            printf("Too high! try again");
+            printf("Too high! try again\n");
         }
 
     } 
