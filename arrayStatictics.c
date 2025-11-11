@@ -9,7 +9,9 @@ float maxOf(float array[], float size);
 
 float main() {
     // Find sum, average, min, and max of array elements.
+    // initialize and array with some elements
     float array[] = {2, 5, 6, 8, 1, 9};
+    // Getting the size of the array
     float size = sizeof(array) / sizeof(array[0]);
 
     // Handling Sum.
