@@ -3,7 +3,7 @@
 
 int main() {
     // Main function fumctionality
-    int numbers[] = {4, 5, 6, 9, 1, 2, 10};
+    int numbers[] = {4, 5, 6, 9, 15, 2, 10};
 
     // Getting the length of the strength
     int length = sizeof(numbers) / sizeof(numbers[0]);

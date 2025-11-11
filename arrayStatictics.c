@@ -4,17 +4,22 @@
 // Function prototypes
 float sumOf(float array[], float size);
 float avegOf(float array[], float size);
+float minOf(float array[], float size);
+float maxOf(float array[], float size);
 
 float main() {
     // Find sum, average, min, and max of array elements.
     float array[] = {2, 5, 6, 8, 1, 9};
     float size = sizeof(array) / sizeof(array[0]);
 
-
     // Handling Sum.
     printf("The sum of all the numbers is %f\n", sumOf(array, size));
     // Handling Average.
-    printf("The sum of all the numbers is %f\n", avegOf(array, size));
+    printf("The average of all the numbers is %f\n", avegOf(array, size));
+    // Handling minimum values.
+    printf("The minimum of all the numbers is %f\n", minOf(array, size));
+    // Handling maximum values.
+    printf("The maximum of all the numbers is %f\n", maxOf(array, size));
     return 0;
     
 }
@@ -28,19 +33,34 @@ float sumOf(float array[], float size) {
     return sum;
 }
 
-
-
-
-
-
 float avegOf(float array[], float size) {
     // Calculates the average of an array
     float avg = sumOf(array, size) / size;
     return avg;
 }
-// float sum(float array[]) {
-//     // Calculates the min of an array
-// }
+
+float minOf(float array[], float size) {
+    // Calculates the min of an array
+    float min = array[0];
+
+    for (int i = 0; i < size; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    return min;
+}
+float maxOf(float array[], float size) {
+    // Calculates the min of an array
+    float max = array[0];
+
+    for (int i = 0; i < size; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
+}
 // float sum(float array[]) {
 //     // Calculates the max of an array
 // }
