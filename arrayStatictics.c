@@ -51,7 +51,7 @@ float minOf(float array[], float size) {
     return min;
 }
 float maxOf(float array[], float size) {
-    // Calculates the min of an array
+    // Calculates the maximum of an array
     float max = array[0];
 
     for (int i = 0; i < size; i++) {
@@ -61,6 +61,3 @@ float maxOf(float array[], float size) {
     }
     return max;
 }
-// float sum(float array[]) {
-//     // Calculates the max of an array
-// }
