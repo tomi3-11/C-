@@ -52,6 +52,7 @@ float minOf(float array[], float size) {
     }
     return min;
 }
+
 float maxOf(float array[], float size) {
     // Calculates the maximum of an array
     float max = array[0];
