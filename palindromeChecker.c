@@ -14,6 +14,13 @@ int main() {
 
     reverse(rev, word);
 
+
+    if (strcmp(rev, word) == 0) {
+        printf("It is palindrome\n");
+    } else {
+        printf("It is not a palindrome\n");
+    }
+
     return 0;
 }
 
