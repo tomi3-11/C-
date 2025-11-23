@@ -1,16 +1,24 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h> 
 
 int main ()
 {
     // Simple Voting System | Count votes using arrays. 
-    char votes[] = {};
+    // get user input
+    // store in array
+    // display the votes
 
-    char user_input[10];
+    
+    
+    char votes[20];
+
+    char user_input[3];
 
     printf("Enter vote: ");
-    printf("Yes or No");
-    scanf("%s", user_input);
+    scanf("%s\n", user_input);
+    
 
-
+    printf("Response Here: ");
+    printf("%s", user_input);
 }
