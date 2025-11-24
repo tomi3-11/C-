@@ -4,34 +4,20 @@
 
 int main() {
     // Power of a Number | Implement using recursion. |
-    int num, power;
+    // initializing the project variables
+    int num, power, answer;
 
+    // Getting user inputs for the variables stated.
     printf("Base: ");
     scanf("%d", &num);
     printf("index: ");
     scanf("%d", &power);
 
-    int answer = pow(num, power);
+    // Calculating the power of the Number and index given.
+    answer = pow(num, power);
 
-    printf("%d", answer);
+    // Displaying a readable Output to the user.
+    printf("%d raised to power %d is %d\n", num, power, answer);
 
-    /*
-    def power(n, pw):
-
-        for i in range(0, n):
-            // if n == 0:
-            //     return 1
-            // elif n == 1:
-            //     return n
-            // else:
-            return pow(pw, i)
-
-    num = input("Enter num: ")
-    pwd = input("Enter power: ")
-    result = power(pwd, num)
-    print(result)
-        
-        
-    
-    */
+    return 0;
 }
