@@ -1,9 +1,19 @@
 #include <stdio.h>
+#include <math.h>
 
 
 int main() {
     // Power of a Number | Implement using recursion. |
     int num, power;
+
+    printf("Base: ");
+    scanf("%d", &num);
+    printf("index: ");
+    scanf("%d", &power);
+
+    int answer = pow(num, power);
+
+    printf("%d", answer);
 
     /*
     def power(n, pw):
