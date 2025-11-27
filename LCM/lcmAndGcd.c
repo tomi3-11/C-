@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <math.h>
+
+// Function prototypes
+int lcm(int a, int b);
 
 int main() {
     // LCM and GCD
@@ -16,18 +21,26 @@ int main() {
     - Until 1 is obtained
     - multiply all the divisor to obtain the LCM 
     */
+    
+    // Calling the LCm Functions
+    int ans = lcm(num1, num2);
+    print("The LCM of %d and %d is %d", num1, num2, ans);
+    
+}
 
+int lcm(int a, int b) {
+    // Calculates LCM using iterative approach
+    if (a == 0 or b == 0) {
+        return 0;
+    }
+    a, b = abs(a), abs(b);
+    int max_num = max(a, b);
+    
     while (true) {
-        int divisor;
-        if ( num1 % 2 == 0 && num2 % 2 == 0) {
-            divisor = 2;
-        } else {
-            divisor = 3;
-        }
-
-        if ( num1 / divisor == 1 && num2 / divisor == 1) {
-              printf("LCM Reached");
-              break;
-        }
+	if (max_num % a == 0 and max_num % b = 0) {
+	    return max_num;
+	}
+	max_num += 1;
     }
 }
+
