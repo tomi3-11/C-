@@ -10,9 +10,9 @@ int main() {
     // LCM and GCD
     int num1, num2;
 
-    printf("Num 1:");
+    printf("Num 1 :");
     scanf("%d", &num1);
-    printf("Num 2:");
+    printf("Num 2: ");
     scanf("%d", &num2);
 
     // get user input
@@ -24,7 +24,7 @@ int main() {
     
     // Calling the LCm Functions
     int ans = lcm(num1, num2);
-    printf("The LCM of %d and %d is %d", num1, num2, ans);
+    printf("The LCM of %d and %d is %d\n", num1, num2, ans);
     
 }
 
