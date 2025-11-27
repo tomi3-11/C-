@@ -10,7 +10,7 @@ int main() {
     // LCM and GCD
     int num1, num2;
 
-    printf("Num 1 :");
+    printf("Num 1: ");
     scanf("%d", &num1);
     printf("Num 2: ");
     scanf("%d", &num2);
