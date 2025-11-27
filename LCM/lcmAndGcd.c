@@ -24,20 +24,20 @@ int main() {
     
     // Calling the LCm Functions
     int ans = lcm(num1, num2);
-    print("The LCM of %d and %d is %d", num1, num2, ans);
+    printf("The LCM of %d and %d is %d", num1, num2, ans);
     
 }
 
 int lcm(int a, int b) {
     // Calculates LCM using iterative approach
-    if (a == 0 or b == 0) {
+    if (a == 0 || b == 0) {
         return 0;
     }
     a, b = abs(a), abs(b);
-    int max_num = max(a, b);
+    int max_num = fmax(a, b);
     
     while (true) {
-	if (max_num % a == 0 and max_num % b = 0) {
+	if (max_num % a == 0 && max_num % b == 0) {
 	    return max_num;
 	}
 	max_num += 1;
