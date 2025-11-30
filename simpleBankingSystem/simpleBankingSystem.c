@@ -19,10 +19,10 @@ int main() {
     account.accountNumber = 12345;
     account.accountBalance = 20000;
 
-    printf("The first name of the account holder is %s", account.fname);
-    printf("The last name of the account holder is %s", account.lname);
-    printf("The account number for %s %s is %d", account.fname, account.lname, account.accountNumber);
-    printf("The account balance for %s %s is %d", account.fname, account.lname, account.accountBalance);
+    printf("The first name of the account holder is %s\n", account.fname);
+    printf("The last name of the account holder is %s\n", account.lname);
+    printf("The account number for %s %s is %d\n", account.fname, account.lname, account.accountNumber);
+    printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
 
 
 
