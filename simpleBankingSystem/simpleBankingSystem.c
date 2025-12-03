@@ -33,6 +33,12 @@ int createAccount(char fName[20], char lName[20]) {
 
 int deposit(int amount) {
     // Depositing an amount to the bank.
+    struct Bank bank;
+
+    // deposit
+    bank.process_account.accountBalance += amount;
+
+    printf("You deposited %d into the account current balance is %s", amount, bank.process_account.accountBalance);
 }
 
 
@@ -73,8 +79,11 @@ int main() {
     scanf("%s", account.fname);
     printf("Enter last Name: ");
     scanf("%s", account.lname);
+    printf("Ammoun to deposit: ");
+    scanf("%d", &account.accountBalance);
 
 
     createAccount(account.fname, account.lname);
 
+    deposit(account.accountBalance);
 }
