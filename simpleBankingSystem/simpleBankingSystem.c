@@ -31,6 +31,14 @@ int createAccount(char fName[20], char lName[20]) {
     return 0;
 }
 
+// withdraw FUNCTION for the BankAccount structure
+int withDraw(int amount) {
+    // with draw from the account.
+    struct Bank withdraw;
+
+    withdraw.process_account.accountBalance -= amount;
+}
+
 int deposit(int amount) {
     // Depositing an amount to the bank.
     struct Bank bank;
