@@ -82,8 +82,9 @@ int main() {
     printf("Ammoun to deposit: ");
     scanf("%d", &account.accountBalance);
 
-
+    // Call the createAccount function to handle the creation of account process.
     createAccount(account.fname, account.lname);
 
+    // Call the deposit function to handle the deposit process.
     deposit(account.accountBalance);
 }
