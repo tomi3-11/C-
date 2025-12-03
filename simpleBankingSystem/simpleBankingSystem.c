@@ -38,7 +38,7 @@ int deposit(int amount) {
     // deposit
     bank.process_account.accountBalance += amount;
 
-    printf("You deposited %d into the account current balance is %d", amount, bank.process_account.accountBalance);
+    printf("You deposited %d into the account current balance is %d\n", amount, bank.process_account.accountBalance);
 }
 
 
