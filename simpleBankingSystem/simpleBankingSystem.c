@@ -12,6 +12,7 @@ struct Bank {
     struct BankAccount process_account;
 };
 
+// createAccount FUNCTION FOR THE BankAccount structure.
 int createAccount(char fName[20], char lName[20]) {
     // Creating user account
     // Creating a struct variable.
@@ -25,9 +26,13 @@ int createAccount(char fName[20], char lName[20]) {
     printf("The first name of the account holder is %s\n", create_account.fname);
     printf("The last name of the account holder is %s\n", create_account.lname);
     printf("The account number for %s %s is %d\n", create_account.fname, create_account.lname, create_account.accountNumber);
-    //printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
+    // printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
 
     return 0;
+}
+
+int deposit(int amount) {
+    // Depositing an amount to the bank.
 }
 
 
@@ -43,7 +48,7 @@ int main() {
         {
             "Create Account",
             "Display account details",
-            "Print my details"
+            "Print my details"(Optional for file handling)
         }
 
     In Bank:
@@ -71,12 +76,5 @@ int main() {
 
 
     createAccount(account.fname, account.lname);
-    //strcpy(account.fname, "Tom");
-    //strcpy(account.lname, "Joe");
-    //account.accountNumber = 12345;
-    //account.accountBalance = 20000;
-
-
-
 
 }
