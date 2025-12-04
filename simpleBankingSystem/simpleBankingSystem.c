@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 struct BankAccount {
     char fname[20];
@@ -39,7 +40,7 @@ int withDraw(int amount) {
     // Deduct it from the account balance
     withdraw.process_account.accountBalance -= amount;
 
-    printf("You deposited %d into the account current balance is %d\n", amount, bank.process_account.accountBalance);
+    printf("You withdrew %d into the account current balance is %d\n", amount, withdraw.process_account.accountBalance);
     
 }
 
@@ -86,22 +87,50 @@ int main() {
 
     struct BankAccount account;
 
-    // Getting user details 
-    printf("Enter first Name: ");
-    scanf("%s", account.fname);
-    printf("Enter last Name: ");
-    scanf("%s", account.lname);
-    printf("Ammount to deposit: ");
-    scanf("%d", &account.accountBalance);
-    printf("Ammount to deposit: ");
-    scanf("%d", &account.accountBalance);
+    while (true) {
 
-    // Call the createAccount function to handle the creation of account process.
-    createAccount(account.fname, account.lname);
+        int choice;
 
-    // Call the deposit function to handle the deposit process.
-    deposit(account.accountBalance);
+        // The main menu
+        printf("Enter the choice:\n ");
+        printf("1. Register account:\n ");
+        printf("2. Deposit amount: \n");
+        printf("3. Withdraw amount: \n");
+        printf("4. Quit: ");
 
-    // Call the withdraw function to handle the deposit process.
-    withDraw(account.accountBalance);
+        // Getting the user choice
+        printf("Enter user choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            // Getting user details 
+            printf("Enter first Name: ");
+            scanf("%s", account.fname);
+            printf("Enter last Name: ");
+            scanf("%s", account.lname);
+
+            // Call the createAccount function to handle the creation of account process.
+            createAccount(account.fname, account.lname);
+        } else if (choice == 2) {
+            // get the amount to deposit
+            printf("Ammount to deposit: ");
+            scanf("%d", &account.accountBalance);
+
+            // Call the deposit function to handle the deposit process.
+            deposit(account.accountBalance);
+        } else if (choice == 3) {
+            // get the amount to withdraw
+            printf("Ammount to withdraw: ");
+            scanf("%d", &account.accountBalance);
+
+            // Call the withdraw function to handle the deposit process.
+            withDraw(account.accountBalance);
+        } else if (choice == 4) {
+            printf("THanks for using this App.\n");
+            break;
+        }
+    }
+
+    
+    return 0;  
 }
