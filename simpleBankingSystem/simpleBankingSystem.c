@@ -28,6 +28,8 @@ int createAccount(char fName[20], char lName[20]) {
     printf("The last name of the account holder is %s\n", create_account.lname);
     printf("The account number for %s %s is %d\n", create_account.fname, create_account.lname, create_account.accountNumber);
     // printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
+    printf("Account Created successfully!!!\n")
+
 
     return 0;
 }
@@ -92,11 +94,11 @@ int main() {
         int choice;
 
         // The main menu
-        printf("Enter the choice:\n ");
-        printf("1. Register account:\n ");
-        printf("2. Deposit amount: \n");
-        printf("3. Withdraw amount: \n");
-        printf("4. Quit: ");
+        printf("Enter the choice:\n");
+        printf("1. Register account:\n");
+        printf("2. Deposit amount:\n");
+        printf("3. Withdraw amount:\n");
+        printf("4. Quit:\n");
 
         // Getting the user choice
         printf("Enter user choice: ");
