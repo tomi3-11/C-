@@ -28,7 +28,7 @@ int createAccount(char fName[20], char lName[20]) {
     printf("The last name of the account holder is %s\n", create_account.lname);
     printf("The account number for %s %s is %d\n", create_account.fname, create_account.lname, create_account.accountNumber);
     // printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
-    printf("Account Created successfully!!!\n")
+    printf("Account Created successfully!!!\n");
 
 
     return 0;
@@ -39,16 +39,22 @@ int withDraw(int amount) {
     // with draw from the account.
     struct Bank withdraw;
 
+    // int withdraw.process_account.accountBalance = withdraw.Bank.accountBalance;
+
+
     // Deduct it from the account balance
     withdraw.process_account.accountBalance -= amount;
 
-    printf("You withdrew %d into the account current balance is %d\n", amount, withdraw.process_account.accountBalance);
+    printf("You withdrew %d from the account current balance is %d\n", amount, withdraw.process_account.accountBalance);
     
 }
 
 int deposit(int amount) {
     // Depositing an amount to the bank.
     struct Bank bank;
+    
+    bank.process_account.accountBalance = 0;
+
 
     // deposit
     bank.process_account.accountBalance += amount;
