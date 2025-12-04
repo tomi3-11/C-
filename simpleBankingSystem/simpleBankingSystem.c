@@ -36,7 +36,11 @@ int withDraw(int amount) {
     // with draw from the account.
     struct Bank withdraw;
 
+    // Deduct it from the account balance
     withdraw.process_account.accountBalance -= amount;
+
+    printf("You deposited %d into the account current balance is %d\n", amount, bank.process_account.accountBalance);
+    
 }
 
 int deposit(int amount) {
@@ -87,7 +91,9 @@ int main() {
     scanf("%s", account.fname);
     printf("Enter last Name: ");
     scanf("%s", account.lname);
-    printf("Ammoun to deposit: ");
+    printf("Ammount to deposit: ");
+    scanf("%d", &account.accountBalance);
+    printf("Ammount to deposit: ");
     scanf("%d", &account.accountBalance);
 
     // Call the createAccount function to handle the creation of account process.
@@ -95,4 +101,7 @@ int main() {
 
     // Call the deposit function to handle the deposit process.
     deposit(account.accountBalance);
+
+    // Call the withdraw function to handle the deposit process.
+    withDraw(account.accountBalance);
 }
