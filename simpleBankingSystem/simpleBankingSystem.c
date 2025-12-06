@@ -21,11 +21,8 @@ struct Bank {
 void withDraw(struct BankAccount *acc, int amount);
 void deposit(struct BankAccount *acc, int amount);
 int createAccount(char fName[20], char lName[20]);
+void checkBalance(struct BankAccount *acc);
 
-
-void checkBalance(struct BankAccount *acc) {
-    printf("Your account balance is %d\n", acc->accountBalance);
-}
 
 
 int main() {
@@ -155,4 +152,9 @@ void deposit(struct BankAccount *acc, int amount) {
     acc -> accountBalance += amount;
 
     printf("You deposited %d into the account current balance is %d\n", amount, acc->accountBalance);
+}
+
+// Checks the balance in the account
+void checkBalance(struct BankAccount *acc) {
+    printf("Your account balance is %d\n", acc->accountBalance);
 }
