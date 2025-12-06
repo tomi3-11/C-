@@ -24,7 +24,7 @@ int createAccount(char fName[20], char lName[20]);
 
 
 void checkBalance(struct BankAccount *acc) {
-    printf("Your account balance is %d", acc->accountBalance);
+    printf("Your account balance is %d\n", acc->accountBalance);
 }
 
 
