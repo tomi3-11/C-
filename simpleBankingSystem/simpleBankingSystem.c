@@ -2,10 +2,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-// Function Prototypes
-void withDraw(struct BankAccount *acc, int amount);
-void deposit(struct BankAccount *acc, int amount);
-int createAccount(char fName[20], char lName[20]);
 
 
 // Bank account structure
@@ -16,11 +12,15 @@ struct BankAccount {
     int accountBalance;
 };
 
-
 // Bank structure
 struct Bank {
     struct BankAccount process_account;
 };
+
+// Function Prototypes
+void withDraw(struct BankAccount *acc, int amount);
+void deposit(struct BankAccount *acc, int amount);
+int createAccount(char fName[20], char lName[20]);
 
 
 int main() {
@@ -53,25 +53,25 @@ int main() {
         }
         */
             
-            struct BankAccount account;
-            
-            while (true) {
-                
-                int choice;
-                
-                // The main menu
-                printf("Enter the choice:\n");
-            printf("1. Register account:\n");
-            printf("2. Deposit amount:\n");
-            printf("3. Withdraw amount:\n");
-            printf("4. Quit:\n");
-            
-            // Getting the user choice
-            printf("Enter user choice: ");
-            scanf("%d", &choice);
-            
-            if (choice == 1) {
-                // Getting user details 
+    struct BankAccount account;
+    
+    while (true) {
+        
+        int choice;
+        
+        // The main menu
+        printf("Enter the choice:\n");
+        printf("1. Register account:\n");
+        printf("2. Deposit amount:\n");
+        printf("3. Withdraw amount:\n");
+        printf("4. Quit:\n");
+        
+        // Getting the user choice
+        printf("Enter user choice: ");
+        scanf("%d", &choice);
+        
+        if (choice == 1) {
+            // Getting user details 
             printf("Enter first Name: ");
             scanf("%s", account.fname);
             printf("Enter last Name: ");
