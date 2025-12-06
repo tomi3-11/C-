@@ -127,11 +127,12 @@ int main() {
             deposit(account.accountBalance);
         } else if (choice == 3) {
             // get the amount to withdraw
+            int amount;
             printf("Ammount to withdraw: ");
-            scanf("%d", &account.accountBalance);
+            scanf("%d", &amount);
 
             // Call the withdraw function to handle the deposit process.
-            withDraw(account.accountBalance);
+            withDraw(&account, amount);
         } else if (choice == 4) {
             printf("THanks for using this App.\n");
             break;
