@@ -38,7 +38,7 @@ int createAccount(char fName[20], char lName[20]) {
 void withDraw(struct BankAccount *acc, int amount) {
 
     if (amount > acc->accountBalance) {
-        printf("Insufficient balance please deposit money in your account.");
+        printf("Insufficient balance please deposit money in your account.\n");
     } else {
         acc -> accountBalance -= amount;
 
@@ -48,17 +48,11 @@ void withDraw(struct BankAccount *acc, int amount) {
     
 }
 
-int deposit(int amount) {
+int deposit(struct BankAccount *acc, int amount) {
     // Depositing an amount to the bank.
-    struct Bank bank;
-    
-    bank.process_account.accountBalance = 0;
+    acc -> accountBalance += amount;
 
-
-    // deposit
-    bank.process_account.accountBalance += amount;
-
-    printf("You deposited %d into the account current balance is %d\n", amount, bank.process_account.accountBalance);
+    printf("You deposited %d into the account current balance is %d\n", amount, acc->accountBalance);
 }
 
 
@@ -120,11 +114,12 @@ int main() {
             createAccount(account.fname, account.lname);
         } else if (choice == 2) {
             // get the amount to deposit
+            int amount;
             printf("Ammount to deposit: ");
-            scanf("%d", &account.accountBalance);
+            scanf("%d", &amount);
 
             // Call the deposit function to handle the deposit process.
-            deposit(account.accountBalance);
+            deposit(&account, amount);
         } else if (choice == 3) {
             // get the amount to withdraw
             int amount;
