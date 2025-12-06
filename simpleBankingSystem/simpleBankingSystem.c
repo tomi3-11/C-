@@ -35,7 +35,7 @@ int createAccount(char fName[20], char lName[20]) {
 }
 
 // withdraw FUNCTION for the BankAccount structure
-void withdraw(struct BankAccount *acc, amount) {
+void withDraw(struct BankAccount *acc, int amount) {
 
     if (amount > acc->accountBalance) {
         printf("Insufficient balance please deposit money in your account.");
