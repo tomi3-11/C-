@@ -35,17 +35,16 @@ int createAccount(char fName[20], char lName[20]) {
 }
 
 // withdraw FUNCTION for the BankAccount structure
-int withDraw(int amount) {
-    // with draw from the account.
-    struct Bank withdraw;
+void withdraw(struct BankAccount *acc, amount) {
 
-    // int withdraw.process_account.accountBalance = withdraw.Bank.accountBalance;
+    if (amount > acc->accountBalance) {
+        printf("Insufficient balance please deposit money in your account.");
+    } else {
+        acc -> accountBalance -= amount;
 
+        printf("You withdrew %d from the account current balance is %d\n", amount, acc->accountBalance);
+    }
 
-    // Deduct it from the account balance
-    withdraw.process_account.accountBalance -= amount;
-
-    printf("You withdrew %d from the account current balance is %d\n", amount, withdraw.process_account.accountBalance);
     
 }
 
