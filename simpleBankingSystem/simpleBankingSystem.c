@@ -23,6 +23,11 @@ void deposit(struct BankAccount *acc, int amount);
 int createAccount(char fName[20], char lName[20]);
 
 
+void checkBalance(struct BankAccount *acc) {
+    printf("Your account balance is %d", acc->accountBalance);
+}
+
+
 int main() {
     // | 20   | Simple Banking System (CLI) | Deposit, withdraw, check balance (using functions and structures). |
     /*
@@ -64,7 +69,8 @@ int main() {
         printf("1. Register account:\n");
         printf("2. Deposit amount:\n");
         printf("3. Withdraw amount:\n");
-        printf("4. Quit:\n");
+        printf("4. Check Balance:\n");
+        printf("5. Quit:\n");
         
         // Getting the user choice
         printf("Enter user choice: ");
@@ -96,6 +102,8 @@ int main() {
             // Call the withdraw function to handle the deposit process.
             withDraw(&account, amount);
         } else if (choice == 4) {
+            checkBalance(&account);
+        } else if (choice == 5) {
             printf("THanks for using this App.\n");
             break;
         }
