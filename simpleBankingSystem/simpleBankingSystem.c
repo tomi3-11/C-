@@ -20,7 +20,7 @@ struct Bank {
 // Function Prototypes
 void withDraw(struct BankAccount *acc, int amount);
 void deposit(struct BankAccount *acc, int amount);
-int createAccount(char fName[20], char lName[20]);
+int createAccount(struct BankAccount *acc);
 void checkBalance(struct BankAccount *acc);
 
 
@@ -75,13 +75,13 @@ int main() {
         
         if (choice == 1) {
             // Getting user details 
-            printf("Enter first Name: ");
-            scanf("%s", account.fname);
-            printf("Enter last Name: ");
-            scanf("%s", account.lname);
+            //printf("Enter first Name: ");
+            //scanf("%s", account.fname);
+            //printf("Enter last Name: ");
+            //scanf("%s", account.lname);
             
             // Call the createAccount function to handle the creation of account process.
-            createAccount(account.fname, account.lname);
+            createAccount(&account);
         } else if (choice == 2) {
             // get the amount to deposit
             int amount;
