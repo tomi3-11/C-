@@ -85,8 +85,14 @@ int main() {
         } else if (choice == 2) {
             // get the amount to deposit
             int amount;
+            int accountNumberD;
+
+            printf("Enter account Number: ");
+            scanf("%d", &accountNumberD);
+
             printf("Ammount to deposit: ");
             scanf("%d", &amount);
+
             
             // Call the deposit function to handle the deposit process.
             deposit(&account, amount);
@@ -147,11 +153,20 @@ void withDraw(struct BankAccount *acc, int amount) {
     
 }
 
-void deposit(struct BankAccount *acc, int amount) {
-    // Depositing an amount to the bank.
-    acc -> accountBalance += amount;
 
-    printf("You deposited %d into the account current balance is %d\n", amount, acc->accountBalance);
+// !!!!!! Implement account Number before deposit
+void deposit(struct BankAccount *acc, int amount) {
+    // Asking for the account number
+    if (!acc->accountNumber) {
+        printf("Incorrect account details (Account Number)\n");
+    } else {
+
+        // Depositing an amount to the bank.
+        acc -> accountBalance += amount;
+    
+        printf("You deposited %d into the account current balance is %d\n", amount, acc->accountBalance);
+    }
+    
 }
 
 // Checks the balance in the account
