@@ -144,6 +144,7 @@ int createAccount(struct BankAccount *acc) {
 
 }
 
+// !!!!!! Implement account Number before deposit
 // withdraw FUNCTION for the BankAccount structure
 void withDraw(struct BankAccount *acc, int amount) {
 
@@ -159,7 +160,7 @@ void withDraw(struct BankAccount *acc, int amount) {
 }
 
 
-// !!!!!! Implement account Number before deposit
+
 void deposit(struct BankAccount *acc, int amount) {
     // Asking for the account number
     if (!acc->accountNumber) {
