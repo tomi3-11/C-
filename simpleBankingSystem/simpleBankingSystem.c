@@ -121,19 +121,24 @@ int main() {
 
 
 // createAccount FUNCTION FOR THE BankAccount structure.
-int createAccount(char fName[20], char lName[20]) {
+int createAccount(struct BankAccount *acc) {
     // Creating user account
     // Creating a struct variable.
-    struct BankAccount create_account;
+    // struct BankAccount create_account;
 
     // Creating user details for the new account
-    strcpy(create_account.fname, fName);
-    strcpy(create_account.lname, lName);
-    create_account.accountNumber = 12345;
+    ///strcpy(acc->fname, fName);
+    //strcpy(acc->lname, lName);
+    
+    printf("Enter first Name: ");
+    scanf("%19s", acc->fname);
+    printf("Enter last Name: ");
+    scanf("%19s", acc->lname);
+    acc->accountNumber = 12345;
 
-    printf("The first name of the account holder is %s\n", create_account.fname);
-    printf("The last name of the account holder is %s\n", create_account.lname);
-    printf("The account number for %s %s is %d\n", create_account.fname, create_account.lname, create_account.accountNumber);
+    printf("The first name of the account holder is %s\n", acc->fname);
+    printf("The last name of the account holder is %s\n", acc->lname);
+    printf("The account number for %s %s is %d\n", acc->fname, acc->lname, acc->accountNumber);
     // printf("The account balance for %s %s is %d\n", account.fname, account.lname, account.accountBalance);
     printf("Account Created successfully!!!\n");
 
