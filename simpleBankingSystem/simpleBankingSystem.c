@@ -147,15 +147,19 @@ int createAccount(struct BankAccount *acc) {
 // !!!!!! Implement account Number before deposit
 // withdraw FUNCTION for the BankAccount structure
 void withDraw(struct BankAccount *acc, int amount) {
-
-    if (amount > acc->accountBalance) {
-        printf("Insufficient balance please deposit money in your account.\n");
+    // checking if bank account exist.
+    if (!acc->accountNumber) {
+        printf("Invalid account details (Account number)\n");
     } else {
-        acc -> accountBalance -= amount;
 
-        printf("You withdrew %d from the account current balance is %d\n", amount, acc->accountBalance);
+        if (amount > acc->accountBalance) {
+            printf("Insufficient balance please deposit money in your account.\n");
+        } else {
+            acc -> accountBalance -= amount;
+
+            printf("You withdrew %d from the account current balance is %d\n", amount, acc->accountBalance);
+        }
     }
-
     
 }
 
