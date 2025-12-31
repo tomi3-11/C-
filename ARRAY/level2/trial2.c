@@ -16,11 +16,11 @@ int main()
     }
 
     // the avarage is the sum / size
-    int average = sum / size;
+    float average = sum / size;
 
     // Displaying to the user
     printf("The sum of the array is %d.\n", sum);
-    printf("The average is %d.\n", average);
+    printf("The average is %f.\n", average);
 
     return 0;
 
