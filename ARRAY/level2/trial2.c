@@ -20,7 +20,7 @@ int main()
 
     // Displaying to the user
     printf("The sum of the array is %d.\n", sum);
-    printf("The average is %f.\n", average);
+    printf("The average is %.4f.\n", average);
 
     return 0;
 
