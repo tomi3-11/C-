@@ -3,10 +3,10 @@
 int main()
 {
     // find the largest element in an array
-    int arr[] = {2, 5, 6, 3, 1, 9};
+    int arr[] = {2, 5, 6, 3, 1, 9, 4, 7};
 
     // Maximum value
-    int max = 0;
+    int max = arr[0];
 
     // size of the array
     int size = sizeof(arr) / sizeof(arr[0]);
