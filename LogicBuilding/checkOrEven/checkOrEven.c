@@ -3,6 +3,10 @@
 int main(){
     // checking whether positive or negativ
     int num;
+    
+    // getting user inputs
+    printf("Enter a number: ");
+    scanf("%d", &num);
 
     if (num < 1) {
 	printf("The number %d is negative.\n", num);    
