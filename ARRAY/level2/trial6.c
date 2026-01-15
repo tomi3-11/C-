@@ -1,26 +1,55 @@
 /* A program to find the second largest number */
 
 #include <stdio.h>
+#include <limits.h> // For INT_MIN
+
+#define MAX_SIZE 1000 // Maximum array size
 
 int main(){
 
     // find the second largest element in an array
-    int arr[] = {4, 2, 7, 9, 5, 6, 34, 78};
+    //int arr[] = {4, 2, 7, 9, 5, 6, 34, 78};
 
-    // array size
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int arr[MAX_SIZE], size, i;
+    int max1, max2;
 
-    // maximum and second maximum
-    int max = arr[0];
-    int secMin = arr[0];
+    // Input size of the array
+    printf("Enter size of the array (1-1000): ");
+    scanf("%d", &size);
 
-    for (int i = 0; i < size; i++){
-	if (arr[i] > max){
-	    max = arr[i];
+    // Input array elements
+    printf("Enter elements in the array: ");
+    for (i = 0; i < size; i++) {
+	scanf("%d", &arr[i]);
+    }
+
+    max1 = max2 = INT_MIN;
+
+    /*
+     * Check for first Largest and second
+    */
+    for (i = 0; i < size; i++){
+	if (arr[i] > max1) {
+	    /*
+	     * If current element of the array is first largest
+	     *  then make current max as second max
+	     *  and then max as current array element
+	     */
+	    max2 = max1;
+	    max1 = arr[i];
+	} else if (arr[i] > max2 && arr[i] < max1) {
+	    /*
+	     * If current array element is less than first largest
+	     * but is greater than second largest then make it second largest
+	     */
+	    max2 = arr[i];
 	}
     }
 
-    printf("The second largest %d.\n", max);
+    printf("The first largest = %d\n", max1);
+    printf("The second largest = %d\n", max2);
+
+    
 
     return 0;
 
