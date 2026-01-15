@@ -1,3 +1,5 @@
+/* A program to find the second largest number */
+
 #include <stdio.h>
 
 int main(){
