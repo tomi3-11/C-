@@ -1,0 +1,3 @@
+A man walks into
+a bar. Ouch!
+#include "rimshot.txt"
