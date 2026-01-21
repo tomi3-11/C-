@@ -144,3 +144,126 @@ declaration
 If grammer is wrong -> syntax error
 
 ---
+
+3. Semantic Analysis (Type Checking)
+Now the compiler asks:
+- Does this variable exists?
+- Are types compatible?
+- Are functions declared correctly?
+
+Example:
+```c
+int reptile() {
+    return "frog";
+}
+```
+
+`"frog"`, is `char*`, not `int`
+
+Compiler warning:
+> return makes integer from pointer without a cast
+
+Core C rule
+> Everything has one fixed type.
+
+No dynamic typing. No guessing.
+
+---
+
+4. Linear Processing Rule (CRITICAL)
+The compiler reads top to bottom.
+```c
+
+int main() {
+    answer();
+}
+
+int answer() {
+    return 42;
+}
+
+```
+#### Error: `answer` not declared
+
+Why? <br>
+Because when the compiler reached `main`, it had not seen `answer` yet.
+
+Fix:
+```c
+
+
+```c
+int answer(); // declaration
+
+int main() {
+    answer();
+}
+
+int answer() {
+    return 42;
+}
+ 
+```
+
+Declaration tells the compiler what exists <br>
+Definition tells it how it works
+
+---
+
+### What comes out of compilation?
+An object file:
+```css
+
+main.c -> main.o
+```
+
+This contains:
+- Machine code (incomplete)
+- Symbol references (names not resolved)
+It cannot run yet.
+
+---
+
+## Stage 3: Assembling (Usually Invisible)
+The assembler:
+- Converts assembly -> machine instructions
+- Product `.o` files
+You rarely interact with this directly.
+
+## Stage 4: Linking (Where Many People get confused)
+> "Stitching pieces together."
+
+#### What the linker does
+Each `.o` file says:
+- "I define these functions"
+- "I need these functions"
+
+Example:
+main.o
+```makefile
+needs: answer
+defines: main
+```
+
+answer.o
+```makefile
+defines: answer
+```
+
+The linker:
+- Matches needs <-> definitions
+- Fixes address
+- Produces one executable
+
+---
+
+Classic linker error explained
+```js
+undefined reference to `answer`
+```
+
+Means:
+> "I searched all object files and libraries.
+> Nobody defines `answer`."
+
+
