@@ -10,20 +10,24 @@ we can convert integers to floats using 2 ways
 
 we can see some examples here
 ```c
+// Type conversion for integers, boolean, floats. More can be added from here
 #include <stdio.h>
 #include <stdbool.h>
 
 int main() {
-    // type conversion in c
-    bool x = true;
+        // Type conversion in action using Assignment
+        // Initialization of x
+        bool x = true;
 
-    int x = y;
+        // bool to integer
+        int y = x;
 
-    // display them
-    printf("Display x %d.\n", x);
-    printf("Display y %d.\n", y);
+        // bool to float
+        float z = x;
 
+        printf("Display x %d.\n", x);
+        printf("Display y %d.\n", y);
+        printf("Display z %f.\n", z);
 
 }
-
-```
+``
