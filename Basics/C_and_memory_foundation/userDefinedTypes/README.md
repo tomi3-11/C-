@@ -30,7 +30,9 @@ int main(){
     // Struct in c
     struct Student s1 = {"Tom", 12};
     
-    //
+    // Displaying contents of the structure
+    printf("Name %s.\n", s1.name);
+    printf("Age %d.\n", s1.age);
 
 }
 ```
