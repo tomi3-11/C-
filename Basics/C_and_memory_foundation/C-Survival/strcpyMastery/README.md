@@ -65,3 +65,17 @@ int main(){
 ```
 
 **Explanation**: The size of the buffer s2 in which we are copying into is less than the source `s1`, it copies well using the `strcpy` function well but ends up overiding the data of the next declaration i.e `char name[10];`.
+
+### Safe Alternative: strncpy
+To avoid buffer overflow, consider using `strncpy`, which allows you to specify the maximum number of characters to copy, thus preventing overflow.
+
+```c
+strncpy(dest, stc, sizeof(dest) - 1);
+dest[sizeof(dest) - 1] = '\0'; 
+```
+
+### Explanation:
+
+- strcpy is used to copy a string from one location to another in C.
+- It is simple but lacks bounds checking, which can lead to buffer overflow.
+- Always ensure the destination array has enough space or consider using strncpy for safer string copying.
