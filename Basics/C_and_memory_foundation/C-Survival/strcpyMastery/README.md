@@ -33,3 +33,35 @@ int main(){
 
 **Explanation**: This program has 2 variables `s1` and `s2`, `s1` is the source, and `s2` is the destination, i.e where it will bw copied.
 
+
+### Risk of Buffer Overflow
+> Def: *Buffer*-> Is a temporary memory that smooths out difference in speed, timing, or structure btn parts of a system.
+
+Review the code below to understand buffer overflow with the `strcpy` function.
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char s1[] = "Hello! Welcome to Wotoro Tech";
+
+    // Small buffer
+    char s2[5];
+
+    // Some other array
+    char name[10] = "Rahul";
+
+    // Copying string using strcpy (unsafe)
+    // Unsafe: will cause buffer overflow which may overwrite the name
+
+    strcpy(s2, s1);
+
+    printf("Dest: %s\n", s2);
+    printf("Name: %s\n", name);
+
+    return 0;
+
+}
+```
+
+**Explanation**: The size of the buffer s2 in which we are copying into is less than the source `s1`, it copies well using the `strcpy` function well but ends up overiding the data of the next declaration i.e `char name[10];`.
