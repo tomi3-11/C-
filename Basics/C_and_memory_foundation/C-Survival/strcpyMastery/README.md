@@ -31,4 +31,5 @@ int main(){
 }
 ```
 
-**Explanation**: The function take
+**Explanation**: This program has 2 variables `s1` and `s2`, `s1` is the source, and `s2` is the destination, i.e where it will bw copied.
+
