@@ -19,3 +19,9 @@ int main(){
 
 ```
 These header file help in input and output
+
+2. getting the memory address
+```c
+printf("x address: %p\n", (void*)&x);
+```
+This line prints the memmory address of the variable `x`.
