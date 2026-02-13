@@ -7,10 +7,10 @@ int main(){
         // void pointer holds address of int 'a'
         void* p = &a;
 
-        printf("Memory Address of a: %d\n", p);
+        printf("Memory Address of a: %p\n", p);
 
         // void pointer holds address of char 'b'
         p = &b;
 
-        printf("Memory Address of b: %d\n", p);
+        printf("Memory Address of b: %p\n", p);
 }
