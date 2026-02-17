@@ -1,20 +1,32 @@
 #include <stdio.h>
-#include <string.h>
 
-int main(){
-	char word[20];
-	// Getting their password
-	printf("Enter a password: ");
-	scanf("%s", &word);
+int StrLen(char *word){
+    int count = 0;
+    
+    while (word[count] != '\0'){
+        count ++;
+    }
+    return count;
+}
 
-	int size = strlen(word);
+int main() {
+    // A program the checks for password strength.
+    char word[20];
+    printf("Enter your password: ");
+    scanf("%s", word);
+    
+    if (StrLen(word) < 8){
+        printf("Your password is week and short.");
+    } else if (8 <= StrLen(word) <= 15) {
+        printf("Your password is medium but needs strengthening for better security.");
+    } else if (StrLen(word) > 15) {
+        printf("Mate your password is strong enough, Aura");
+    } else {
+        printf("You better enter a strong password.");
+    }
+    
+    // int size = StrLen(word);
+    // printf("The size is %d\n", size);
 
-	if (size < 8){
-		printf("PassWord is weak\n");
-	}else{
-		printf("Password is kinder strong.\n");
-	}
-
-	return 0;
-
+    return 0;
 }
