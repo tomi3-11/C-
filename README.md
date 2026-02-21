@@ -1,7 +1,7 @@
 # C Beginner CLI Projects
 
 Welcome to my collection of **beginner-friendly C command-line projects!**  
-These small programs are perfect for learning the fundamentals of C programming — including input/output, conditionals, arithmetic, and functions.
+These small programs are perfect for learning the fundamentals of C programming — including input/output, conditionals, arithmetic, and functions. Also a beginner beginner-friendly place to learn different c stuffs.
 
 ---
 
