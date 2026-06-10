@@ -23,3 +23,11 @@ Requires:
 ```sh
 gcc main.c -lm
 ```
+Output:
+```sh
+❯ gcc main.c -lm
+main.c:3:6: error: expected declaration specifiers or ‘...’ before numeric constant
+    3 | sqrt(25);
+      |      ^~
+
+```
